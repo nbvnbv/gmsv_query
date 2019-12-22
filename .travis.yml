@@ -20,6 +20,7 @@ matrix:
         packages:
         - linux-libc-dev:i386
         - g++-8-multilib
+        - travis
     env:
     - PREMAKE5="$TRAVIS_BUILD_DIR/dependencies/linux/premake-core/premake5" PROJECT_OS=linux
     before_install:
