@@ -40,8 +40,6 @@ install:
 script: "$BUILD_SCRIPT"
 deploy:
   provider: releases
-  user: "nbvnbv"
-  password: "g1g2g3g4"
   file: "${TRAVIS_BUILD_DIR}/projects/${PROJECT_OS}/${COMPILER_PLATFORM}/release/gmsv_${MODULE_NAME}_${TARGET_OS}.dll"
   skip_cleanup: true
   on:
