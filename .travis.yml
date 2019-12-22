@@ -7,7 +7,7 @@ env:
     GARRYSMOD_COMMON="$TRAVIS_BUILD_DIR/dependencies/garrysmod_common" SOURCE_SDK="$TRAVIS_BUILD_DIR/dependencies/sourcesdk-minimal"
     TARGET_OS="$TRAVIS_OS_NAME" COMPILER_PLATFORM=gmake BUILD_SCRIPT="$TRAVIS_BUILD_DIR/dependencies/garrysmod_common/build/ci.sh"
     GARRYSMOD_COMMON_REPOSITORY="https://github.com/danielga/garrysmod_common.git"
-    PREMAKE5_EXECUTABLE=premake5
+    PREMAKE5_EXECUTABLE=premake5 $GITHUB_KEY="2b6b086fa04f77ec0b422cd16876b38299f3707d"
 matrix:
   include:
   - os: linux
@@ -37,9 +37,8 @@ install:
   update --init --recursive; fi
 script: "$BUILD_SCRIPT"
 deploy:
-  skip_cleanup: true
   provider: releases
-  api_key: "2b6b086fa04f77ec0b422cd16876b38299f3707d"
+  api_key: $GITHUB_KEY
   file: "${TRAVIS_BUILD_DIR}/projects/${PROJECT_OS}/${COMPILER_PLATFORM}/release/gmsv_${MODULE_NAME}_${TARGET_OS}.dll"
   on:
     repo: nbvnbv/gmsv_query
