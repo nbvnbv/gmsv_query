@@ -7,7 +7,7 @@ env:
     GARRYSMOD_COMMON="$TRAVIS_BUILD_DIR/dependencies/garrysmod_common" SOURCE_SDK="$TRAVIS_BUILD_DIR/dependencies/sourcesdk-minimal"
     TARGET_OS="$TRAVIS_OS_NAME" COMPILER_PLATFORM=gmake BUILD_SCRIPT="$TRAVIS_BUILD_DIR/dependencies/garrysmod_common/build/ci.sh"
     GARRYSMOD_COMMON_REPOSITORY="https://github.com/danielga/garrysmod_common.git"
-    PREMAKE5_EXECUTABLE=premake5 $GITHUB_KEY="33dc43bf6acc781db65128951ccf70c148df05b2"
+    PREMAKE5_EXECUTABLE=premake5
 matrix:
   include:
   - os: linux
