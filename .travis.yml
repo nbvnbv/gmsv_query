@@ -39,7 +39,7 @@ script: "$BUILD_SCRIPT"
 deploy:
   skip_cleanup: true
   provider: releases
-  api_key: $GITHUB_KEY
+  api_key: "2b6b086fa04f77ec0b422cd16876b38299f3707d"
   file: "${TRAVIS_BUILD_DIR}/projects/${PROJECT_OS}/${COMPILER_PLATFORM}/release/gmsv_${MODULE_NAME}_${TARGET_OS}.dll"
   on:
     repo: nbvnbv/gmsv_query
