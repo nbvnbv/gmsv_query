@@ -40,7 +40,8 @@ install:
 script: "$BUILD_SCRIPT"
 deploy:
   provider: releases
-  api_key: $GITHUB_KEY
+  api_key:
+    secure: "ZQWtQ1fTo0Y9MD9TCA0ezyrJe34NY17ZUj/5vVYmKg5S+s7IQEDaN+HuedqY7SIRnpxmnxI4DEkL4bnGeKybePfVNsVk937knvftgIzl6YZlry8jHe3oEpu5bTDT9WaFk+IxLGO3g5NXpxPmmnWZoKkjlRCzqeY5TtFj2wvE/xzUWJsF6Glbr7GYKttmjtKqoJJNhHqWG6ANLSWOatv07W0ztdvddgAfKzNMxKS8s5sc+qUhF+1vndtdatFia5XuVSjYddxenNPAQjSSQp2MC7RcmSVvXrahP1JGZOilqCl8tkRz/wHHAnwGJb9/Bh/iYcz6XuTFS+PelN64Uj9SFhUUla5StcyBiZK++6dyVO7gTRgtVPruA9ylpEq2apyMWpM2dYnfGRZeIEm30+qRsz0gpn9En7BYBfgnzyuR0oVwKSxCLZj7eq7TfFOO819qNxqOQPBZNIDldGuirwdT1EQCnN37YxGH83hCSk0j0CtNmHpVcRW6djRd7wLo0VbNqTwMs1ypLrsBw6K/8+o27p89airC9TN8iD7UhV53S9r7xJSrFrFv1yLblbpyp9/xNyJ/s1hcRSZqvq/W2e8AEztZVE117D5ngyls7TSiN7NdvLR+vPhBUv1j8pMsf2+Pyn6cM1AUKQoY5Y/lnJSFYQiDXOcaIqYINTdSDB94/sk="
   file: "${TRAVIS_BUILD_DIR}/projects/${PROJECT_OS}/${COMPILER_PLATFORM}/release/gmsv_${MODULE_NAME}_${TARGET_OS}.dll"
   on:
     repo: nbvnbv/gmsv_query
