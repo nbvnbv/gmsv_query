@@ -30,7 +30,6 @@ cache:
   - "$TRAVIS_BUILD_DIR/dependencies"
   - "$TRAVIS_BUILD_DIR/projects"
 install:
-- travis setup releases --pro
 - mkdir -p "$DEPENDENCIES"
 - if [ ! -f "$GARRYSMOD_COMMON/premake5.lua" ]; then echo "garrysmod_common directory
   is empty, doing git clone of the remote repo"; git clone --recursive "$GARRYSMOD_COMMON_REPOSITORY"
