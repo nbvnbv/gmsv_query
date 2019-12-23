@@ -37,8 +37,6 @@ install:
   latest changes"; git -C "$GARRYSMOD_COMMON" pull; git -C "$GARRYSMOD_COMMON" submodule
   update --init --recursive; fi
 script: "$BUILD_SCRIPT"
-after_success:
--ls
 deploy:
   skip_cleanup: true
   provider: releases
